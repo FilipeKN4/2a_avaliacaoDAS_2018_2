@@ -14,15 +14,21 @@ public class CDB {
 	}
 	
 	public static float calculaRendimentoBruto(float valor_inicial, float juros_anual, int prazo) {
-		return 13.97f;
+		float renda_bruta = valor_inicial * (((juros_anual/360.00f) * prazo)/100.00f); 
+		
+		return renda_bruta;
 	}
 	
 	public static float calculaImpostoDeRenda(float renda_bruta, float aliquota_ir) {
-		return 3.14f;
+		float imposto_renda = renda_bruta * (aliquota_ir/100.00f);
+		return imposto_renda;
 	}
 	
-	public static float calculaRendimentoLiquido(float valor_inicial, float renda_bruta) {
-		return 1.0829f;
+	public static float calculaRendimentoLiquido(float valor_inicial, float renda_bruta, float imposto_renda) {
+		float renda_liquida = renda_bruta - imposto_renda;
+		float renda_liquida_pct = ((renda_liquida/valor_inicial) * 100.00f);
+		
+		return renda_liquida_pct;
 	}
 	
 }
