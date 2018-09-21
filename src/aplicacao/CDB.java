@@ -13,7 +13,7 @@ public class CDB {
 		this.aliquota_ir = aliquota_ir;
 	}
 	
-	public static float calculaRendimentoBruto(float valor_inicial, float juros_anual) {
+	public static float calculaRendimentoBruto(float valor_inicial, float juros_anual, int prazo) {
 		return 13.97f;
 	}
 	
